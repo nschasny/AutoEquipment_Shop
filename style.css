@@ -1,0 +1,1097 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 1280px;
+    margin: 0 auto;
+    background-image: url('images/dk.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    overflow-x: hidden;
+}
+
+body {
+    zoom: 75%; /* Adjust the percentage as needed */
+}
+
+header {
+    position: relative; 
+    width: 1278px;
+    height: 139px;
+    display:inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('images/headerbg.avif'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-left: 0.25px solid rgba(255, 255, 255, 0.208); 
+    border-right: 0.25px solid rgba(255, 255, 255, 0.215);
+}
+
+h1{
+    background: linear-gradient(to right, #a92cfcf0, #05e4bb);  
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    text-align: center;
+    font-size: 85px;
+    position: relative;
+    BOTTOM:200PX;
+    font-weight: BOLD;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+
+h1 svg{
+position: relative;
+top:14px;
+ 
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, var(--overlay-opacity, 0.9)); 
+}
+
+.header-background {
+    filter: brightness(60%); 
+}
+
+
+.logo {
+    width: 200px;
+    margin-left: 22px;
+    margin-top: -6px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    
+    margin-right: 500px;
+    margin-top:5px
+}
+
+li {
+    padding: 6px;
+    margin: 0 20px;
+    color: rgb(223, 223, 223);
+    font-size: 17.5px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif, sans-serif; 
+    z-index:10;
+    cursor: pointer;
+}
+
+a {
+    color: rgb(241, 241, 241);
+    text-decoration: none;
+    position: relative; 
+}
+
+a:hover {
+    color: rgb(213, 210, 218);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -4px;
+    left: 0;
+    background-color: rgb(202, 255, 10); 
+
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.6s ease-in-out; 
+}
+
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background-image: linear-gradient(to right, rgb(209, 0, 59), rgb(0, 51, 255), rgb(255, 200, 0)); 
+    background-size: 200% 100%; 
+    animation: changeGradient 5s infinite; 
+}
+
+@keyframes changeGradient {
+    0% {
+        background-position: 0 0; 
+    }
+    50% {
+        background-position: 50% 0; 
+    }
+    50% {
+        background-position: 90% 0; 
+    }
+
+}
+
+.content {
+    position: relative;
+    background-image: url('images/bon.jpg');
+    height: 4870px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1px); 
+}
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.69);
+    z-index: -1;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    cursor: pointer;
+    z-index: 12; 
+}
+
+
+.icon {
+    width: auto; 
+    height: auto; 
+    max-width: 50px; 
+    max-height: 50px; 
+    margin-left: 10px; 
+    fill: #fff;
+    margin-right: 20px;
+    position: relative; 
+    right: 200px
+}
+
+#darkIcon {
+    left: -607px;
+    z-index: 1000;
+    min-width: 100px;
+}
+
+#lightIcon {
+    position: relative;
+    left: -571px; 
+    z-index: 1001; 
+
+}
+
+
+li {
+    padding: 6px;
+    color: rgb(223, 223, 223);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+}
+
+
+li a {
+    display: block;
+    white-space: nowrap; 
+}
+
+
+li + li {
+    margin-left: 20px; 
+}
+
+
+
+.icon.dark-mode {
+    max-width: 50px; 
+    max-height: 50px;
+}
+#housei {
+    color:  black;
+}
+
+header.dark-mode ul li a::after {
+    background-color: rgb(255, 10, 108);
+}
+
+.icon3 svg{
+width: 50px;
+}
+
+.rectangle {
+    width: 210px;
+    height: 250px; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 55px; 
+}
+
+.content {
+    padding: 20px;
+}
+
+.content2{
+    position: relative;
+    bottom: 130px;
+    left:15px;
+}
+
+.row {
+    z-index: 10000;
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: -65px;
+    position: relative;
+    bottom:190px;
+    left:28px;
+    height: 445px; 
+
+}
+
+.rectangle img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.rectangle img[src="images/shellt1.png"] {
+    position: relative;
+    top:16px;
+    width: 99%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/shellt4.png"] {
+    position: relative;
+    top:15px;
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/shellt5.png"] {
+    position: relative;
+    top:15px;
+    right:6px;
+    width: 101%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/formula.png"] {
+    position: relative;
+    top:18px;
+    width: 99%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/battery1.png"] {
+    position: relative;
+    top:35px;
+    right:-11px;
+    width: 90%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/battery2.png"] {
+    position: relative;
+    top:37px;
+    right:10px;
+    width: 110%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/battery3.png"] {
+    position: relative;
+    top:41px;
+    left:18px;
+    width: 86%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/batterry4.png"] {
+    position: relative;
+    top:25px;
+    left:10px;
+    width: 92%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/img6.png"] {
+    position: relative;
+    top:15px;
+    left:5px;
+    width:100%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/vdcar.png"] {
+    position: relative;
+    top:6px;
+    left:-5px;
+    width:108%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/soap2.png"] {
+    position: relative;
+    top:7px;
+    left:-5px;
+    width:108%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/mclarenimg.webp"] {
+    position: relative;
+    top:1px;
+    left:20px;
+    width:88%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/disk1.png"] {
+    position: relative;
+    top:30px;
+    left:-18px;
+    width:114%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/disk2.png"] {
+    position: relative;
+    top:35px;
+    left:17px;
+    width:83%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/disk3.png"] {
+    position: relative;
+    top:15px;
+    left:-30px;
+    width:128%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+
+.rectangle img[src="images/disk4.png"] {
+    position: relative;
+    top:17px;
+    left:-30px;
+    width:125%; 
+    height: auto; 
+    object-fit: cover;
+   
+}
+.rectangle {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    background-image: url(images/oil3.jpg);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    overflow: hidden;
+    transition: border-width 0.3s ease, border-color 2s ease, box-shadow 1s ease; 
+    border-style: solid;
+    border-width: 3px; 
+    animation: rotateBorder 4s infinite alternate, changeWidth 4s infinite alternate; 
+}
+
+
+
+.rectangle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+     
+    transition: opacity 0.3s ease; 
+    opacity: 0; 
+}
+
+.rectangle:hover::before {
+    opacity: 1; 
+}
+
+@keyframes rotateBorder {
+    0% {
+        border-color: #9891faac; 
+    }
+    50% {
+        border-color: #375cff; 
+    }
+    100% {
+        border-color: #513efb; 
+    }
+}
+
+
+
+.itemssell{
+    margin: 0px;
+    position: relative;
+    top:90px;
+}
+
+.motoroils{
+    position: relative;
+    bottom:155px;
+    text-align: center;
+    font-size: 70PX;
+    font-weight: 900;
+    z-index: 10000001;
+    background: linear-gradient(to right, rgba(169, 44, 252, 0.941), #05e4bb); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+}
+
+.raceimg{
+    width: 1280px;
+    position: relative;
+    right:20px;
+    bottom:200px;
+    height:60px;
+}
+
+.rectangle {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 30px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(243, 239, 254, 0.405); 
+    transition: border-width 0.3s ease, border-color 2s ease, box-shadow 1s ease; 
+    border-style: solid;
+    border-width: 4px; 
+    animation: rotateBorder 4s infinite alternate, changeWidth 4s infinite alternate; 
+}
+
+.rectangle {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 30px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; 
+}
+
+.rectangle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     
+    border-radius: inherit;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.246); 
+    transition: opacity 0.3s ease; 
+    opacity: 0; 
+}
+
+.rectangle:hover::before {
+    opacity: 1; 
+}
+
+.rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative; 
+    z-index: 1; 
+}
+
+#row2 div{
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#row3 div{
+
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#row4 div{
+
+    background-image: url('');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#row2 .rectangle {
+    
+}
+
+@keyframes rotateBorderRow2 {
+    0% {
+        border-color: #0022ff; 
+    }
+    50% {
+        border-color: #ad278b; 
+    }
+    100% {
+        border-color: #5f56b7; 
+    }
+}
+
+
+@keyframes rotateBorderRow3 {
+    0% {
+        border-color: #fff200; 
+    }
+    50% {
+        border-color: #a2ff00; 
+    }
+    100% {
+        border-color: #fbff00; 
+    }
+}
+
+
+@keyframes rotateBorderRow4 {
+    0% {
+        border-color: #b4b4b4; 
+    }
+    50% {
+        border-color: #585858; 
+    }
+    100% {
+        border-color: #c9c9c9; 
+    }
+}
+
+#row2 .rectangle {
+    width: 230px;
+    height: 325px;
+    background-image: url(images/bg1.jpg);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(243, 239, 254, 0.405); 
+    overflow: hidden;
+    position: relative;
+    animation: rotateBorderRow2 4s infinite alternate, changeWidth 4s infinite alternate;
+}
+
+#row3 .rectangle {
+    width: 230px;
+    height: 325px;
+    background-image: url(images/imgco.jpg);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(243, 239, 254, 0.405); 
+    overflow: hidden;
+    position: relative;
+    animation: rotateBorderRow3 4s infinite alternate, changeWidth 4s infinite alternate;
+}
+
+#row4 .rectangle {
+    width: 230px;
+    height: 325px;
+    background-image: url(images/img12.jpg);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(243, 239, 254, 0.405); 
+    overflow: hidden;
+    position: relative;
+    animation: rotateBorderRow4 4s infinite alternate, changeWidth 4s infinite alternate;
+}
+
+#bottomrace {
+    width: 1280px;
+    position: relative;
+    right:20px;
+    bottom:155px;
+    height:60px;
+}
+
+#bottomrace2 {
+    width: 1280px;
+    position: relative; 
+    right: 20px;
+    bottom: 95px;
+    height: 60px;
+}
+
+#bottomrace3{
+    position: relative;
+    top:30px;
+}
+
+.rectangle {
+    width: 230px;
+    height: 325px;
+    background-image: url(images/oil3.jpg);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(243, 239, 254, 0.405); 
+    overflow: hidden;
+    position: relative;
+}
+
+.rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-name {
+    position: absolute;
+    bottom: -15px; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22.5px;
+    border-top: 2.8px solid rgb(235, 235, 235);
+    padding-top: 8px;
+}
+
+.arrows{
+    position: absolute;
+    top:10px;
+    left:130px;
+}
+
+input{
+    width:25px;
+    height: 50px;
+    border-radius: 20px;
+    color: #fbff00;
+    z-index: 100000;
+    position: relative;
+    right:-220px;
+    top:-350px
+}
+
+
+.cart-item {
+    display:inline-block;
+    border-radius: 20px;
+    font-size: 15px; 
+    color: white; 
+    font-weight: bold; 
+    border: 3px solid white; 
+    padding: 10px; 
+   
+    height: 155px; 
+    width:240px;
+    margin-bottom:100px;
+}
+
+.cartt {
+    justify-content: center;
+    position: relative;
+    bottom:250px;
+    right:15px;
+    width:1275px; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+.cartt::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.cartt::-webkit-scrollbar-track {
+    background-color: rgba(217, 255, 0, 0.913); 
+}
+
+.cartt::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(169, 44, 252, 0.941), #05e4bb); 
+    border-radius: 46px; 
+}
+
+.cartt::-webkit-scrollbar-thumb:hover {
+    background-color: blueviolet; 
+}
+
+.cart-item {
+    cursor: pointer;
+    font-size: 25px; 
+    color:rgb(71, 41, 11); 
+    font-weight: bold; 
+    border: 1px solid rgb(253, 200, 116); 
+    padding: 10px; 
+    display: inline-block; 
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+    background-image: url(images/box-front.jpg); 
+    background-size:contain; 
+    background-repeat: no-repeat;
+    text-align: left; 
+}
+
+
+.quantity-input{
+    width:40px;
+    height:30px;
+    position: relative;
+    top:120px;
+    left:20px;
+    font-size: 20px;
+    color:black
+}
+
+.quantity-label{
+    position: relative;
+    top: 121px;
+    left:10px;
+}
+
+.cart-item .item-name {
+    
+    margin-left: 0px;
+    
+}
+
+h1::after {
+    content: "";
+    display: block;
+    height: 23px;
+    background: linear-gradient(to right, rgba(169, 44, 252, 0.941), #05e4bb);
+    position: relative;
+    top: -10px;
+    left: -19px;
+    margin-top: 20px; 
+    z-index: -1;
+    width:1280px; 
+}
+
+.cartt::after {
+    content: "";
+    display: block;
+    height: 23.5px;
+    background: linear-gradient(to right, rgba(169, 44, 252, 0.941), #05e4bb);
+    position: relative;
+    top: -22px;
+    left:-10px;
+    margin-top: 20px; 
+    z-index: -1;
+    width: 1300px; 
+}
+
+.cart-item:not(:first-child) {
+    margin-left: 8px; 
+}
+
+.cartt.hide-after::after {
+    display: none;
+}
+
+.checkout {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 1232px;
+    height: 100px;
+    border-radius: 10px;
+    border: 5px solid white;
+    position:relative;
+    right: 20px;
+    bottom:255px;
+    margin-top: 20px;
+    padding: 0 20px; 
+}
+
+
+.checkout .ratecalc {
+    flex: 1; 
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    font-size: 27px;
+    padding: 20px 10px; 
+    border-right: 3px solid white; 
+}
+
+
+.checkout .ratecalc:last-child {
+    border-right: none;
+}
+
+.sorder{
+    padding:20px 30px;
+    position: relative;
+    bottom:219px;
+    border-radius: 20px;
+    left:500px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(to right, #84ff00, rgba(255, 218, 11, 0.941));
+}
+
+.content2inside input {
+    position: relative;
+    top:-100px;
+    right:-650px;
+    color:black;
+    font-size: 30px;
+    width: 100px; 
+}
+
+.content2inside p {
+    
+    text-align: center;
+    font-size: 30px !important; 
+}
+
+.content2inside button {
+    position: relative;
+    left:385px;
+    font-size: 40px !important;
+    font-weight: bold; 
+}
+
+.content2inside input {
+    position: relative;
+    top:-85px;
+    right:-576px;
+    color:black;
+    font-size: 30px;
+    width: 60px;
+    font-weight: bold; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    text-align: center;
+    -moz-appearance: textfield;
+    border: 3px solid white; 
+    background-color: transparent; 
+    color: white;
+}
+
+.container h3 {
+    text-align: left;
+    position: relative;
+    left: 140px;
+    top:20px;
+    font-size: 80px;
+    width: 100vw;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    position: relative;
+    bottom:50px;
+    font-family: "Arial";
+    width: 700px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #3838ff;
+    border-radius: 20px;
+    height: auto; 
+}
+
+.container input {
+    position: relative;
+    top: -50px;
+    right: -10px;
+    width: 94%;
+    padding: 8px;
+    margin: 8px 0px;
+    border: 1px solid #dddddd;
+    font-size: 25px;
+    color: black;
+    border-radius: 5px;
+    font-family: poppins;
+}
+
+.container textarea {
+    font-family: poppins;
+    position: relative;
+    left: 12px;
+    font-size: 26px;
+    width: 94%;
+    max-width: 94%;
+    max-height: 100%;
+    padding: 8px;
+    margin: 8px 0px;
+    border: 1px solid #dddddd;
+}
+
+.container input[type="submit"] {
+    position: relative;
+    top: 20px;
+    width: 97%;
+    background-color: #ef0050;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: -10px;
+    transition: background-color 0.3s ease; 
+}
+
+.container input[type="submit"]:hover {
+    background-color: #bd1b4e; 
+}
+
+.container input:focus,
+.container textarea:focus {
+    outline: 5px solid rgb(0, 221, 255); 
+}
+
+
+ .select input[type="radio"] {
+
+    position: relative;
+    right:30px;
+    top:2px;
+    width: 30px;
+    height: 30px;
+}
+
+.select input[type="radio"]:focus {
+    outline: none;
+    position: relative;
+    right:30px;
+    top:2px;
+    width: 30px;
+    height: 30px;
+    outline:none;
+}
+
+.select label{
+    border:3px solid white;
+    color:white;
+    padding:10px;
+    font-size:30px;
+    margin-right: 50px;
+    position: relative;
+}
+
+#contactForm p{
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom:40px;
+    font-size: 30px;
+}
+
+#contactForm {
+    position: relative;
+    bottom:100px;
+}
+
+.select{
+    position: relative;
+    bottom:40px;
+    left:195px;
+}
+
+#productDisplay {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product {
+    display: none;
+}
+
+.product.active {
+    display: block;
+}
+
+#productControls button{
+    position: relative;
+    left:330px;
+    font-size:30px;
+    margin-right: 20px;
+}
+
+
+#productDisplay p {
+    font-size: 30px;;
+}
+
+#bottomrace5{
+    position: relative;
+   bottom:5px;
+   left:1px;
+}
+
+#bottomrace4{
+    position: relative;
+    top:-105px
+}

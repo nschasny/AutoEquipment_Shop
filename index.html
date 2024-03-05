@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoParts</title>
+    <link rel="icon" type="image/x-icon" href="images/autopfavicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Medusa+Gothic&display=swap">
+    
+    <style>
+  
+    .itemized input[type="checkbox"] {
+        visibility: hidden;
+    }
+
+    .itemized.checked input[type="checkbox"],
+    .itemized:hover input[type="checkbox"] {
+        visibility: visible;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 30px; /* Adjust as needed */
+        height: 30px; /* Adjust as needed */
+        border: 2.5px solid #fff; /* White border */
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 30px; /* Adjust as needed */
+        height: 30px; /* Adjust as needed */
+        border: 2.5px solid #fff; /* White border */
+        outline: none;
+        cursor: pointer;
+        visibility: visible;
+    }
+    /* Define custom checkbox checked state */
+    input[type="checkbox"]:checked::before {
+        position: relative;
+        top:5px;
+        content: "\2713"; /* Checkmark symbol */
+        display: block;
+        text-align: center;
+        line-height: 18px; /* Adjust as needed */
+        font-size: 23px; /* Adjust as needed */
+        color: rgb(179, 255, 0); /* Blue color for checkmark */
+        font-weight: bold;
+        visibility: visible;
+    }
+
+    /* Optional: Add hover effect */
+    input[type="checkbox"]:hover {
+        border-color: #ffffff; /* Change border color on hover */
+    }  
+
+
+      h2 {
+        position: relative;
+        top:30px;
+        color: #ffcc00;
+        text-align: center;
+        font-size: 50px; 
+        font-weight:bold /* Yellow heading color */
+      }
+      p, input, button {
+        color: #efb20c; /* Text color */
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      button {
+        background: linear-gradient(to right, rgba(255, 218, 11, 0.941), #d9ff00); /* Yellow button background color */
+        color: #1c1c1c; /* Dark text color for button */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ffd633; /* Lighter yellow on hover */
+      }
+    </style>
+    
+    </head>
+    <body>
+        <header>
+            <img src="images/autoplogo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">Motor Oils</a></li>
+                <li><a href="#">Batteries</a></li>
+                <li><a href="#">Car Wash</a></li>
+                <li><a href="#">Discs</a></li>
+            </ul>
+            
+            <div class="icons">
+                <!-- First SVG icon -->
+                <img src="images/houseicon.svg" alt="Icon 1" class="icon" id="housei">
+                <!-- Second SVG icon -->
+                <img src="images/carticon.svg" alt="Icon 2" class="icon" id="carti">
+                <!-- Third SVG icon -->
+                <img src="images/profileicon.svg" alt="Icon 3" class="icon" id="profi">
+                <!-- Light and Dark mode icons -->
+                <img id="lightIcon" src="images/light.svg" alt="Light Icon" class="icon3" style="display: none;" width="50" onclick="toggleIcon()">
+                <img id="darkIcon" src="images/dark.svg" alt="Dark Icon" class="icon" onclick="toggleIcon()">
+                <!-- Dark mode icons -->
+            </div>
+            
+        </header>
+    <div class="content">
+        <div class="overlay"></div>
+        <div class="itemssell">
+            <p class="motoroils">
+                &#x25C0;&#x25C0;&#x25C0; OUR PRODUCTS &#x25B6;&#x25B6;&#x25B6;
+            </p>
+            <img src="images/raceflash.png" alt="" class="raceimg">
+            <div class="row">
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/shellt1.png" alt="Image 1">
+                        <p class="image-name"> Shell Rotella T1 <br> <b>$17.98</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="seventeen"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/shellt4.png" alt="Image 2">
+                        <p class="image-name"> Shell Rotella T4<br> <b>$15.98</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="sixteen"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/shellt5.png" alt="Image 3">
+                        <p class="image-name"> Shell Rotella T5 <br> <b>$19.74</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="fourteen"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/formula.png" alt="Image 3">
+                        <p class="image-name"> Shell Formula 1 <br> <b>$37.62</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="thirteen"></label></span>
+                </div>
+            </div>
+
+            <div class="row" id="row2">
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/battery2.png" alt="Image 6">
+                        <p class="image-name"> Endurant Speed <br> <b>$179.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="one"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/battery1.png" alt="Image 5">
+                        <p class="image-name">DieHard Gold <br> <b>$236.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="two"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/battery3.png" alt="Image 6">
+                        <p class="image-name">DieHard Platinum <br> <b>$276.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="three"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/batterry4.png" alt="Image 6">
+                        <p class="image-name">DieHard Silver <br> <b>$216.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="four"></label></span>
+                </div>
+            </div>
+
+            <div class="row" id="row3">
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/vdcar.png" alt="Image 4">
+                        <p class="image-name">Voodoo Ride <br> <b>$29.27</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="five"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/soap2.png" alt="Image 5">
+                        <p class="image-name">Meguiras Gold <br> <b>$24.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="six"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/img6.png" alt="Image 6">
+                        <p class="image-name">Meguiras Ultimatic <br> <b>$25.56</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="seven"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/mclarenimg.webp" alt="Image 6">
+                        <p class="image-name">Purple Power<br> <b>$35.47</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="eight"></label></span>
+                </div>
+            </div>
+
+            <div class="row" id="row4">
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/disk1.png" alt="Image 4">
+                        <p class="image-name">Chrome Rims <br> <b>$464.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="nine"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/disk2.png" alt="Image 5">
+                        <p class="image-name">Aluminium Rims <br> <b>$334.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="ten"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/disk3.png" alt="Image 6">
+                        <p class="image-name"> Steel Rims <br> <b>$356.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="eleven"></label></span>
+                </div>
+                <div class="itemized">
+                    <div class="rectangle">
+                        <img src="images/disk4.png" alt="Image 6">
+                        <p class="image-name"> Alloy Rims <br> <b>$649.99</b></p>
+                    </div>
+                    <span><label><input type="checkbox" id="twelve"></label></span>
+                </div>
+            </div>
+
+            <img src="images/raceflash.png" alt="" class="raceimg" id="bottomrace">
+            <h1> YOUR ORDER
+                
+            </h1>
+            <div class = "cartt"></div>
+            <div class="checkout">
+                <div class="ratecalc">Sub-Total: $0.00</div>
+                <div class="ratecalc">Tax Rate: 8.5% tax</div>
+                <div class="ratecalc">Shipping: Flat $7.95</div>
+                <div class="ratecalc">Cart Total: $0.00</div>
+            </div>
+            <button class = "sorder">Submit Order</button>
+        </div>
+            <img src="images/raceflash.png" alt="" class="raceimg" id="bottomrace2">
+           
+    
+        <div class = "content2">
+        <div class="content2inside">
+        <h2>Guess the Number Game</h2>
+            <p>Guess a number between 1 and 10: </p>
+            <br>
+            <br>
+            <br>
+        <input type="number" id="userGuess">
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="result"></p>
+        <p id="errorMessage" style="color: red;"></p>
+        </div>
+        </div>
+        <img src="images/raceflash.png" alt="" class="raceimg" id="bottomrace4">
+        <div class="container">
+        <form id="contactForm" action="#">
+            <h3>Contact Us</h3>
+            <div id="errorMessages"></div>
+                <input type="text" id="firstName" placeholder="First Name" required autofocus>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="emailAddress" placeholder="Email Address" required>
+            <p>Choose Your Preferred Contact Method</p>
+            <div class="select">
+                <label for="phone">Phone</label>
+                <input type="radio" id="phone" name="contactMethod" value="phone">
+                <label for="email">Email</label>
+                <input type="radio" id="email" name="contactMethod" value="email">
+            </div>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+            <img src="images/raceflash.png" alt="" class="raceimg" id="bottomrace3">
+        <div id="productDisplay">
+            <div id="product1" class="product active">
+                <h2>Shell Rotella T4</h2>
+                <img src="images/shellt4.png" alt="Product 1">
+                <p>This is Shell Rotella T4 Oil Used For Trucks</p>
+            </div>
+
+        <div id="product3"  class="product">
+            <h2>Shell Rotella T5</h2>
+            <img src="images/shellt5.png" alt="Product 2">
+            <p>This is Shell Rotella T5 Oil Used For best performance</p>
+        </div>
+
+        <div id="product4"  class="product">
+            <h2>Shell Formula 1</h2>
+            <img src="images/formula.png" alt="Product 2">
+            <p>This is Shell Formula 1 Used for race cars</p>
+        </div>
+
+        </div>
+
+        <div id="productControls">
+            <button onclick="showProduct('product1')">Rotella T4</button>
+            <button onclick="showProduct('product3')">Rotella T5</button>
+            <button onclick="showProduct('product4')">Formula 1</button>
+        </div>
+    </div>
+    <img src="images/raceflash.png" alt="" class="raceimg" id="bottomrace5">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="script2.js"></script>
+    </body>
+    </html>
